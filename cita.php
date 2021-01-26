@@ -60,8 +60,8 @@
           <nav class="navbar navbar-expand-lg navbar-light p-0">
 
             <div class="logo">
-              <a class="d-block" href="index-2.html">
-                <img loading="lazy" src="images/logo.png" alt="Constra">
+              <a class="d-block" href="index.html">
+                <img loading="lazy" src="images/fav.png" alt="Constra">
               </a>
             </div><!-- logo end -->
 
@@ -73,7 +73,7 @@
             <div id="navbar-collapse" class="collapse navbar-collapse">
               <ul class="nav navbar-nav ml-auto align-items-center">
                 <li class="nav-item dropdown active">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Inicio </i></a>
+                  <a href="index.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Inicio </i></a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="tumunicipio.html">tu Municipio</a></li>
                 
@@ -88,7 +88,7 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" target="blank" href="https://ruts.hidalgo.gob.mx/">TRAMITES</a></li>
                 <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Transparencia <i
+                  <a href="https://consultapublicamx.inai.org.mx/vut-web/faces/view/consultaPublica.xhtml" class="nav-link dropdown-toggle" data-toggle="dropdown">Transparencia <i
                       class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="services.html">Services All</a></li>

@@ -1,8 +1,5 @@
 /*!------------------------------------------------------------------
 [MAIN STYLESHEET]
-
-Template Name: Constra - Construction Html5 Template
-Description: Constra - Construction Html5 Template
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
@@ -1439,7 +1436,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .banner-carousel .carousel-control i:hover {
-  background: #ffb600;
+  background: #00ff84;
   color: #fff;
 }
 
@@ -3383,7 +3380,7 @@ label {
 
 .sidebar ul.nav-tabs li.active a,
 .sidebar ul.nav-tabs li:hover a {
-  color: #ffb600;
+  color: #2f00ff;
 }
 
 .sidebar ul.nav-tabs li {
@@ -3412,7 +3409,7 @@ label {
 
 .sidebar ul.service-menu li.active a,
 .sidebar ul.service-menu li:hover a {
-  background: #ffb600;
+  background: #104f9c;
   color: #fff;
   cursor: pointer;
 }
