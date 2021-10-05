@@ -343,7 +343,7 @@ a:focus {
 
 .form-control:focus {
   box-shadow: none;
-  border: 1px solid #ffb600;
+  border: 1px solid #104f9c;
 }
 
 hr {
@@ -367,12 +367,12 @@ blockquote {
   margin: 20px 0;
   background: #f9f9f9;
   position: relative;
-  border-left: 3px solid #ffb600;
+  border-left: 3px solid #104f9c;
   padding-left: 40px;
 }
 
 blockquote.text-center {
-  border-top: 3px solid #ffb600;
+  border-top: 3px solid #104f9c;
   border-left: 0;
   padding-left: 25px;
   padding-top: 50px;
@@ -1402,7 +1402,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .slick-dots li button:hover:before, .slick-dots .slick-dots li button:focus:before,
 .slick-dots li.slick-active button:before {
   opacity: 1;
-  color: #ffb600;
+  color: #104f9c;
 }
 
 .slick-slide {
@@ -1467,9 +1467,9 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .box-slider-text {
-  background: #111;
-  background: rgba(0, 0, 0, 0.65);
-  display: inline-block;
+  background: #104f9c;
+  background: #104f9c;
+  display: inherit;
   padding: 20px 30px;
   max-width: 650px;
 }
@@ -2158,12 +2158,12 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .accordion-group .card-header .btn[aria-expanded="true"] {
-  color: #ffb600;
+  color: #104f9c;
 }
 
 .accordion-group .card-header .btn[aria-expanded="true"]::before {
   content: "\f106";
-  background-color: #ffb600;
+  background-color: #104f9c;
 }
 
 .accordion-group.accordion-classic .card-header .btn:before {
@@ -2194,7 +2194,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 ================================================== */
 .testimonial-area {
   padding: 100px 0;
-  background-color: #ffb600;
+  background-color: #104f9c;
   background-image: url(../images/parallax2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -2231,7 +2231,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   left: 0;
   top: 0;
   font-weight: 700;
-  color: #ffc009;
+  color: #104f9c;
 }
 
 .testimonial-slide .slick-dots {
@@ -2256,7 +2256,7 @@ img.testimonial-thumb {
   margin: 0 0 2px;
   font-weight: 700;
   display: block;
-  color: #ffb600;
+  color: #104f9c;
 }
 
 .quote-item-footer {
@@ -3302,7 +3302,7 @@ label {
   margin: 0 0 30px;
   padding-left: 15px;
   text-transform: uppercase;
-  border-left: 3px solid #ffb600;
+  border-left: 3px solid #104f9c;
 }
 
 /* Widget common */
@@ -3496,3 +3496,61 @@ label {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.dropdown-toggle.btn-default {
+  color: #292b2c;
+  background-color: #fff;
+  border-color: #ccc;
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid #303f9f;
+  border-radius: 0px;
+}
+.dropdown-toggle.btn-default:focus,
+.dropdown-toggle.btn-default:hover{
+  color: #292b2c;
+  background-color: #fff;
+  border-color: #ccc;
+  text-align: left;
+  border: none;
+  border-bottom: 2px solid #303f9f;
+  border-radius: 0px;
+}
+.bootstrap-select.show>.dropdown-menu>.dropdown-menu {
+  display: block;
+}
+
+.bootstrap-select > .dropdown-menu > .dropdown-menu li.hidden{
+  display:none;
+}
+
+.bootstrap-select > .dropdown-menu > .dropdown-menu li a{
+  display: block;
+  width: 100%;
+  padding: 3px 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #292b2c;
+  text-align: inherit;
+  white-space: nowrap;
+  background: 0 0;
+  border: 0;
+}
+
+.dropdown-menu > li.active > a {
+  color: #fff !important;
+  background-color: #3f51b5 !important;
+}
+
+.bootstrap-select .check-mark::after {
+  content: "✓";
+}
+.bootstrap-select button {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Make filled out selects be the same size as empty selects */
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+  display: inline !important;
+}

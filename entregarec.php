@@ -1,3 +1,7 @@
+<?php
+    include("ok.php");
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,7 @@
   <!-- Basic Page Needs
 ================================================== -->
   <meta charset="utf-8">
-  <title>Citas - 2021</title>
+  <title>Tu Municipio</title>
 
   <!-- Mobile Specific Metas
 ================================================== -->
@@ -22,6 +26,7 @@
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="ok.css">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
   <!-- Animation -->
@@ -37,6 +42,15 @@
 
 </head>
 <body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.2.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.2.4/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
   <div class="body-inner">
 
    
@@ -49,8 +63,8 @@
           <nav class="navbar navbar-expand-lg navbar-light p-0">
 
             <div class="logo">
-              <a class="d-block" href="index-2.html">
-                <img loading="lazy" src="images/logo.png" alt="Constra">
+              <a class="d-block" href="index">
+                <img loading="lazy" src="images/fav.png" alt="Constra">
               </a>
             </div><!-- logo end -->
 
@@ -60,71 +74,33 @@
             </button>
 
             <div id="navbar-collapse" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav ml-auto align-items-center">
-                <li class="nav-item dropdown active">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Inicio </i></a>
+            <ul class="nav navbar-nav ml-auto align-items-center">
+              <li class="nav-item dropdown active">
+                  <a href="index" class="nav-link">Inicio </i></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="tumunicipio.html">tu Municipio</a></li>
-                
-
+                <li class="nav-item"><a class="nav-link" href="tumun.html">tu Municipio</a></li>
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tu Gobierno <i
                       class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="doc/ORGANIGRAMA_pdf_2020_6_4_164829.pdf" target="blank">Organigrama</a></li>
-                    <li><a href="reglaments.html">Reglamentos</a></li>
+                    <li><a href="reglaments">Reglamentos</a></li>
                   </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" target="blank" href="https://ruts.hidalgo.gob.mx/">TRAMITES</a></li>
                 <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Transparencia <i
-                      class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="services.html">Services All</a></li>
-                    <li><a href="service-single.html">Services Single</a></li>
-                  </ul>
+                  <a href="https://consultapublicamx.inai.org.mx/vut-web/faces/view/consultaPublica.xhtml" class="nav-link">Transparencia </a>
                 </li>
-
+                <li class="nav-item dropdown"><a href="gaceta">Gaceta</a>                     
+                </li>
                 <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Prensa <i
-                      class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="typography.html">Typography</a></li>
-                    <li><a href="404.html">404</a></li>
-                    <li class="dropdown-submenu">
-                      <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Parent Menu</a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#!">Child Menu 1</a></li>
-                        <li><a href="#!">Child Menu 2</a></li>
-                        <li><a href="#!">Child Menu 3</a></li>
-                      </ul>
-                    </li>
-                  </ul>
+                  <a href="sevac" class="nav-link dropdown-toggle" >LGCG7 </a>
                 </li>
-
                 <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">LGCG7 <i
-                      class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="services.html">Services All</a></li>
-                    <li><a href="service-single.html">Services Single</a></li>
-                  </ul>
+                  <a href="#" class="nav-link">Entrega de Recepcion </a>
                 </li>
-
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Entrega de Recepcion <i
-                      class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="news-left-sidebar.html">News Left Sidebar</a></li>
-                    <li><a href="news-right-sidebar.html">News Right Sidebar</a></li>
-                    <li><a href="news-single.html">News Single</a></li>
-                  </ul>
-                </li>
-
-
-
                 <li class="header-get-a-quote">
-                  <a class="btn btn-primary" href="citas.html">CITAS</a>
+                  <a class="btn btn-primary" href="cita">CITAS</a>
                 </li>
               </ul>
             </div>
@@ -146,11 +122,8 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">citas</h1>
+                <h1 class="banner-title">Conac</h1>
                 <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                      <li class="breadcrumb-item"><a href="#">agenda tu cita para cualquier tramite</a></li>
-                    </ol>
                 </nav>
               </div>
           </div><!-- Col end -->
@@ -158,65 +131,39 @@
     </div><!-- Container end -->
   </div><!-- Banner text end -->
 </div><!-- Banner area end --> 
-
 <section id="main-container" class="main-container">
   <div class="container">
-    
     <div class="row">
-      <div class="col-md-12">
-        <form id="contact-form" action="agendacita.php" method="post" role="form">
-          <div class="error-container"></div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="form-group">
-                <label>Nombre</label>
-                <input class="form-control form-control-name" name="nombre" id="nombre" placeholder="" type="text" required>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label>Apellidos</label>
-                <input class="form-control form-control-name" name="ap" id="ap" placeholder="" type="text" required>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label>Email</label>
-                <input class="form-control form-control-email" name="email" id="email" placeholder="" type="email"
-                  required>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Selecciona la fecha:</label>
-            <input type="datetime-local" class="form-control form-control-message" name="fecha" id="fecha" required></input>
-          </div>
-          <div class="form-group">
-            <label>Area:</label>
-            <div class="form-group">
-              <select class="combobox form-control" name="ar" id="ar" required>
-                <option value="" selected="selected">Selecciona Area</option>
-                <option value="AL">Alabama</option>
-                <option value="AK">Alaska</option>
-                <option value="AZ">Arizona</option>
-              </select>
-            </div>
-          </div>
-          
-          <div class="text-center"><br>
-            <button class="btn btn-primary solid blank" type="submit">Agendar Cita</button>
-          </div>
-        </form>
-      </div>
 
-    </div><!-- Content row -->
-    
-  </div><!-- Conatiner end -->
-</section><!-- Main container end -->
+      <div class="col-xl-10 col-lg-6">
+        <div class="sidebar">
+          <div class="widget">
+            <h3 class="widget-title">Conac H. AYUNTAMIENDO</h3>
+            <ul class="nav service-menu">
+            <?php
+                          require("ok.php");
+                          $query=mysqli_query($conn,"SELECT nombre, pdf, añodoc From tbl_conac;");
+                          while($fila=mysqli_fetch_array($query)){        
+                    echo '
+               <li>
+                <a href="'.$fila['pdf'].'" target="_blank"> <span class="badge badge-primary">'.$fila['añodoc']. ' </span><strong>'.$fila['nombre'].'</strong> 
+                <img src="images/file_extension_pdf.png" ALIGN=LEFT>
+                </a>
+              </li>
+              ';
+            }
+            ?>
+            </ul>
+          </div><!-- Widget end -->      
 
-<footer id="footer" class="footer bg-overlay">
+        </div><!-- Sidebar end -->
+      </div><!-- Sidebar Col end -->
+
      
-
+  </div><!-- Conatiner end -->
+  
+</section><!-- Main container end -->
+<footer id="footer" class="footer bg-overlay">
   <div class="copyright">
     <div class="container">
       <div class="row align-items-center">
@@ -225,18 +172,13 @@
             <span>Copyright &copy;
               <script>
                 document.write(new Date().getFullYear())
-              </script>, Designed &amp; Developed by <a href="https://instagram.com/@juanbhmx">Juan Bautista</a></span>
+              </script>, Diseñado &amp; Desarrollado por <a href="https://instagram.com/@juanbhmx">Juan Bautista</a></span>
           </div>
         </div>
-
         <div class="col-md-6">
           <div class="footer-menu text-center text-md-right">
             <ul class="list-unstyled mb-0">
-              <li><a href="about.html">About</a></li>
-              <li><a href="team.html">Our people</a></li>
-              <li><a href="faq.html">Faq</a></li>
-              <li><a href="news-left-sidebar.html">Blog</a></li>
-              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="about.html">H. AYUNTAMIENDO 2020-2024</a></li>
             </ul>
           </div>
         </div>
@@ -257,6 +199,8 @@
   ================================================== -->
 
   <!-- initialize jQuery Library -->
+  <script language="JavaScript" type="text/javascript" src="jquery-3.5.1.js"></script>
+  <script language="JavaScript" type="text/javascript" src="cita.js"></script>
   <script src="plugins/jQuery/jquery.min.js"></script>
   <!-- Bootstrap jQuery -->
   <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
@@ -267,7 +211,7 @@
   <script src="plugins/colorbox/jquery.colorbox.js"></script>
   <!-- shuffle -->
   <script src="plugins/shuffle/shuffle.min.js" defer></script>
-
+  <script src="path/from/html/page/to/jquery.min.js"></script>
 
   <!-- Google Map API Key-->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>

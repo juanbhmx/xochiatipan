@@ -20,7 +20,7 @@ if($duplicado==1){
         }else{
             mysqli_query($conn,("INSERT INTO citas (nombre, ap, email, fecha, hora, ar) values ('$nombre', '$ap', '$email', '$fecha','$hora', '$ar')"));
             echo "<script> alert('Datos Ingresados correctamente a la base de datos') </script>"; 
-            include('confirmcita.php');
+            include('c04f9a52et2sa2f43as5f6a322asd5f.php');
 
         }     
 ?>

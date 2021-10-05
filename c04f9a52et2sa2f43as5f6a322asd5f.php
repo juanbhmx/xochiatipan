@@ -210,7 +210,7 @@
                       <div class="modal-footer">
                       <script>
 function page() {
-  window.location.replace("index-2.html");
+  window.location.replace("index.html");
 }
 </script>
 <script>
